@@ -9,13 +9,13 @@ namespace Environment
     public class HandTriggerZone : MonoBehaviour
     {
 
-        public UnityEvent<TrackingHandController> OnHandEnter;
-        public UnityEvent<TrackingHandController> OnHandExit;
+        public UnityEvent<HandController> OnHandEnter;
+        public UnityEvent<HandController> OnHandExit;
 
         private void OnTriggerEnter(Collider other)
         {
 
-            TrackingHandController otherHand = other.GetComponentInParent<TrackingHandController>();
+            HandController otherHand = other.GetComponentInParent<HandController>();
             
             if (otherHand != null)
             {
@@ -27,7 +27,7 @@ namespace Environment
         private void OnTriggerExit(Collider other)
         {
 
-            TrackingHandController otherHand = other.GetComponentInParent<TrackingHandController>();
+            HandController otherHand = other.GetComponentInParent<HandController>();
 
             if (otherHand != null)
             {

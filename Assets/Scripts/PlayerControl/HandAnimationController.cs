@@ -21,7 +21,15 @@ namespace PlayerControl
         protected InputAction TriggerAction => _triggerAction.action;
         protected InputAction GripAction => _gripAction.action;
 
-        private void Update()
+        public void Update()
+        {
+
+            if (animator != null)
+                AnimatorValuesUpdate();
+
+        }
+
+        private void AnimatorValuesUpdate()
         {
 
             float thumb, trigger, grip;

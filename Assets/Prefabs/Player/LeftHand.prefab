@@ -245,5 +245,15 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 8
       objectReference: {fileID: 0}
+    - target: {fileID: 8929330463677509925, guid: d4bd0ad34684db149804c34ba34f08b1,
+        type: 3}
+      propertyPath: flipGloveX
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8929330463677509925, guid: d4bd0ad34684db149804c34ba34f08b1,
+        type: 3}
+      propertyPath: negativeGloveScaleX
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d4bd0ad34684db149804c34ba34f08b1, type: 3}

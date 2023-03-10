@@ -119,16 +119,16 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1244398887887423858}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &3940935615483695291 stripped
+--- !u!114 &7687544015632840791 stripped
 MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 2879482680783444425, guid: d4bd0ad34684db149804c34ba34f08b1,
+  m_CorrespondingSourceObject: {fileID: 8929330463677509925, guid: d4bd0ad34684db149804c34ba34f08b1,
     type: 3}
   m_PrefabInstance: {fileID: 1244398887887423858}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e795bf5e7ccabe141a29c53fc8a88cf1, type: 3}
+  m_Script: {fileID: 11500000, guid: 81f7451e46b0ab247a5716ac3a1438a4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1001 &1244398888801243617
@@ -216,16 +216,16 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1244398888801243617}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &2951909054306831017 stripped
+--- !u!114 &8424520934544187973 stripped
 MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 4157868740745386824, guid: f69844fb38acf5446a1e19c390141016,
+  m_CorrespondingSourceObject: {fileID: 7326537550309012388, guid: f69844fb38acf5446a1e19c390141016,
     type: 3}
   m_PrefabInstance: {fileID: 1244398888801243617}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e795bf5e7ccabe141a29c53fc8a88cf1, type: 3}
+  m_Script: {fileID: 11500000, guid: 81f7451e46b0ab247a5716ac3a1438a4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1001 &8510656868190247579
@@ -274,12 +274,12 @@ PrefabInstance:
         type: 3}
       propertyPath: m_SelectExited.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 2951909054306831017}
+      objectReference: {fileID: 8424520934544187973}
     - target: {fileID: 3120859875078828141, guid: 3217ba432dc5f044397f4114f1f56d96,
         type: 3}
       propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 2951909054306831017}
+      objectReference: {fileID: 8424520934544187973}
     - target: {fileID: 3120859875078828141, guid: 3217ba432dc5f044397f4114f1f56d96,
         type: 3}
       propertyPath: m_SelectExited.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
@@ -303,12 +303,12 @@ PrefabInstance:
     - target: {fileID: 3120859875078828141, guid: 3217ba432dc5f044397f4114f1f56d96,
         type: 3}
       propertyPath: m_SelectExited.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: PlayerControl.TrackingHandController, Assembly-CSharp
+      value: PlayerControl.HandController, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 3120859875078828141, guid: 3217ba432dc5f044397f4114f1f56d96,
         type: 3}
       propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: PlayerControl.TrackingHandController, Assembly-CSharp
+      value: PlayerControl.HandController, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 3120859875078828141, guid: 3217ba432dc5f044397f4114f1f56d96,
         type: 3}
@@ -364,12 +364,12 @@ PrefabInstance:
         type: 3}
       propertyPath: m_SelectExited.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 3940935615483695291}
+      objectReference: {fileID: 7687544015632840791}
     - target: {fileID: 6682237182730815979, guid: 3217ba432dc5f044397f4114f1f56d96,
         type: 3}
       propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 3940935615483695291}
+      objectReference: {fileID: 7687544015632840791}
     - target: {fileID: 6682237182730815979, guid: 3217ba432dc5f044397f4114f1f56d96,
         type: 3}
       propertyPath: m_SelectExited.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
@@ -393,12 +393,12 @@ PrefabInstance:
     - target: {fileID: 6682237182730815979, guid: 3217ba432dc5f044397f4114f1f56d96,
         type: 3}
       propertyPath: m_SelectExited.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: PlayerControl.TrackingHandController, Assembly-CSharp
+      value: PlayerControl.HandController, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 6682237182730815979, guid: 3217ba432dc5f044397f4114f1f56d96,
         type: 3}
       propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: PlayerControl.TrackingHandController, Assembly-CSharp
+      value: PlayerControl.HandController, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 6682237182730815979, guid: 3217ba432dc5f044397f4114f1f56d96,
         type: 3}
