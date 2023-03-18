@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using UnityEngine;
+using UnityEngine.XR.Interaction.Toolkit;
 
 namespace PlayerControl
 {
@@ -8,12 +9,18 @@ namespace PlayerControl
 
         [SerializeField] protected bool negativeGloveScaleX;
 
+        [Tooltip("The XR Direct Interactor that the hand is related to. This interactor is disabled when the hand isn't allowed to grab")]
+        [SerializeField] protected XRDirectInteractor grabInteractor;
+
         private Glove currGlove;
 
         private Collider[] currGloveColliders;
 
         private void Start()
         {
+
+            if (grabInteractor == null)
+                Debug.LogWarning("No grab interactor set");
 
             // Try find initial glove and use it
 
@@ -35,6 +42,13 @@ namespace PlayerControl
 
             currGlove = glove;
             currGloveColliders = glove.GetColliders();
+
+            // Set whether allowed to grab
+
+            if (glove.CanGrab)
+                EnableGrab();
+            else
+                DisableGrab();
 
             // Flip glove X if needed
 
@@ -112,6 +126,16 @@ namespace PlayerControl
 
         public void DisableCollidersDelayed(float delay) => SetCollidersStateDelayed(false, delay);
         public void EnableCollidersDelayed(float delay) => SetCollidersStateDelayed(true, delay);
+
+        private void DisableGrab()
+        {
+            grabInteractor.enabled = false;
+        }
+
+        private void EnableGrab()
+        {
+            grabInteractor.enabled = true;
+        }
 
     }
 }
