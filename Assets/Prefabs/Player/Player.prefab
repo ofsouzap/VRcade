@@ -111,11 +111,6 @@ PrefabInstance:
       propertyPath: target
       value: 
       objectReference: {fileID: 3733381443736394911}
-    - target: {fileID: 8929330463677509925, guid: d4bd0ad34684db149804c34ba34f08b1,
-        type: 3}
-      propertyPath: grabInteractor
-      value: 
-      objectReference: {fileID: 3073704567127675760}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d4bd0ad34684db149804c34ba34f08b1, type: 3}
 --- !u!4 &2231493567290474581 stripped
@@ -213,11 +208,11 @@ PrefabInstance:
       propertyPath: target
       value: 
       objectReference: {fileID: 52558649456537942}
-    - target: {fileID: 7326537550309012388, guid: f69844fb38acf5446a1e19c390141016,
+    - target: {fileID: 6176284481216786985, guid: f69844fb38acf5446a1e19c390141016,
         type: 3}
-      propertyPath: grabInteractor
-      value: 
-      objectReference: {fileID: 6725115394696162038}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f69844fb38acf5446a1e19c390141016, type: 3}
 --- !u!4 &49986244453308999 stripped
@@ -334,6 +329,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 3292329511536130071, guid: 3217ba432dc5f044397f4114f1f56d96,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3740777359695168397, guid: 3217ba432dc5f044397f4114f1f56d96,
         type: 3}
@@ -514,33 +514,9 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 8510656868190247579}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &3073704567127675760 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 6682237182730815979, guid: 3217ba432dc5f044397f4114f1f56d96,
-    type: 3}
-  m_PrefabInstance: {fileID: 8510656868190247579}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4253f32900bcc4d499d675566142ded0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!4 &3733381443736394911 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5031734575978939908, guid: 3217ba432dc5f044397f4114f1f56d96,
     type: 3}
   m_PrefabInstance: {fileID: 8510656868190247579}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &6725115394696162038 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 3120859875078828141, guid: 3217ba432dc5f044397f4114f1f56d96,
-    type: 3}
-  m_PrefabInstance: {fileID: 8510656868190247579}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4253f32900bcc4d499d675566142ded0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 

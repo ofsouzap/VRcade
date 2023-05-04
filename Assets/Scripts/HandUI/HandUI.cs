@@ -85,8 +85,6 @@ namespace HandUI
 
                 transform.localPosition = offset;
 
-                Debug.Log("Attached");
-
             }
             else
             {
@@ -108,8 +106,6 @@ namespace HandUI
 
                 transform.parent = initialParent;
                 attached = false;
-
-                Debug.Log("Detached");
 
             }
             else

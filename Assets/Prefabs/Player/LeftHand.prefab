@@ -240,6 +240,36 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 8
       objectReference: {fileID: 0}
+    - target: {fileID: 8204359302351339752, guid: d4bd0ad34684db149804c34ba34f08b1,
+        type: 3}
+      propertyPath: m_SelectAction.m_Reference
+      value: 
+      objectReference: {fileID: -6131295136447488360, guid: bfaf187448ae9304dba3e15516740e71,
+        type: 3}
+    - target: {fileID: 8204359302351339752, guid: d4bd0ad34684db149804c34ba34f08b1,
+        type: 3}
+      propertyPath: m_ActivateAction.m_Reference
+      value: 
+      objectReference: {fileID: -5982496924579745919, guid: bfaf187448ae9304dba3e15516740e71,
+        type: 3}
+    - target: {fileID: 8204359302351339752, guid: d4bd0ad34684db149804c34ba34f08b1,
+        type: 3}
+      propertyPath: m_SelectActionValue.m_Reference
+      value: 
+      objectReference: {fileID: 6558622148059887818, guid: bfaf187448ae9304dba3e15516740e71,
+        type: 3}
+    - target: {fileID: 8204359302351339752, guid: d4bd0ad34684db149804c34ba34f08b1,
+        type: 3}
+      propertyPath: m_HapticDeviceAction.m_Reference
+      value: 
+      objectReference: {fileID: -8785819595477538065, guid: bfaf187448ae9304dba3e15516740e71,
+        type: 3}
+    - target: {fileID: 8204359302351339752, guid: d4bd0ad34684db149804c34ba34f08b1,
+        type: 3}
+      propertyPath: m_ActivateActionValue.m_Reference
+      value: 
+      objectReference: {fileID: -4289430672226363583, guid: bfaf187448ae9304dba3e15516740e71,
+        type: 3}
     - target: {fileID: 8577559599680264694, guid: d4bd0ad34684db149804c34ba34f08b1,
         type: 3}
       propertyPath: m_Layer
