@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 2111259572012189476}
   - component: {fileID: 4217525907295648255}
   - component: {fileID: 7454133488548518407}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: RightHand UI Interaction Controller
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -591,7 +591,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8548206496440970189}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Left Hand Tracker
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -624,7 +624,7 @@ GameObject:
   - component: {fileID: 7448693639688858003}
   - component: {fileID: 7448693639688858002}
   - component: {fileID: 7448693639688858094}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: RightHand Controller
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -858,7 +858,7 @@ GameObject:
   - component: {fileID: 7448693640030782400}
   - component: {fileID: 7448693640030782401}
   - component: {fileID: 7448693640030782406}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Main Camera
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
@@ -1001,7 +1001,7 @@ GameObject:
   - component: {fileID: 7448693640050183625}
   - component: {fileID: 7448693640050183624}
   - component: {fileID: 7448693640050183620}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: LeftHand Controller
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1232,7 +1232,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7448693641226943919}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Camera Offset
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1269,7 +1269,9 @@ GameObject:
   - component: {fileID: 7448693641443755379}
   - component: {fileID: 7448693641443755376}
   - component: {fileID: 7448693641443755377}
-  m_Layer: 0
+  - component: {fileID: 8464809804473217625}
+  - component: {fileID: 5513339446923283131}
+  m_Layer: 11
   m_Name: Player Origin
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1323,6 +1325,39 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_ActionAssets:
   - {fileID: -944628639613478452, guid: bfaf187448ae9304dba3e15516740e71, type: 3}
+--- !u!143 &8464809804473217625
+CharacterController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7448693641443755382}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Height: 1.1176
+  m_Radius: 0.1
+  m_SlopeLimit: 45
+  m_StepOffset: 0.3
+  m_SkinWidth: 0.08
+  m_MinMoveDistance: 0.001
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &5513339446923283131
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7448693641443755382}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: af6bf904e410ee8479f9093d8830d1f8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_LocomotionProvider: {fileID: 0}
+  m_MinHeight: 0
+  m_MaxHeight: Infinity
 --- !u!1 &7631471611034286373
 GameObject:
   m_ObjectHideFlags: 0
@@ -1332,7 +1367,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5031734575978939908}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Right Hand Tracker
   m_TagString: Untagged
   m_Icon: {fileID: 0}
