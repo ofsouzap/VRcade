@@ -68,6 +68,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   negativeGloveScaleX: 0
   grabInteractor: {fileID: 5024444274843258780}
+  _gloveUsePrimaryAction: {fileID: 7509065135184303515, guid: bfaf187448ae9304dba3e15516740e71,
+    type: 3}
+  _gloveUseSecondaryAction: {fileID: 8955492790443131436, guid: bfaf187448ae9304dba3e15516740e71,
+    type: 3}
 --- !u!114 &2879482680783444425
 MonoBehaviour:
   m_ObjectHideFlags: 0

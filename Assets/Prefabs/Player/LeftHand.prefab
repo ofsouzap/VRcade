@@ -285,5 +285,17 @@ PrefabInstance:
       propertyPath: negativeGloveScaleX
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8929330463677509925, guid: d4bd0ad34684db149804c34ba34f08b1,
+        type: 3}
+      propertyPath: _gloveUsePrimaryAction
+      value: 
+      objectReference: {fileID: 5108389561444781418, guid: bfaf187448ae9304dba3e15516740e71,
+        type: 3}
+    - target: {fileID: 8929330463677509925, guid: d4bd0ad34684db149804c34ba34f08b1,
+        type: 3}
+      propertyPath: _gloveUseSecondaryAction
+      value: 
+      objectReference: {fileID: -8453134453144063560, guid: bfaf187448ae9304dba3e15516740e71,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d4bd0ad34684db149804c34ba34f08b1, type: 3}

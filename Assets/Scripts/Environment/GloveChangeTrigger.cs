@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using UnityEngine;
 using PlayerControl;
+using PlayerControl.Gloves;
 
 namespace Environment
 {

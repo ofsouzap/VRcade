@@ -1,5 +1,5 @@
 {
-    "name": "VR Input Actions",
+    "name": "Input Actions",
     "maps": [
         {
             "name": "Head State",
@@ -1626,6 +1626,102 @@
                     "processors": "",
                     "groups": "",
                     "action": "Toggle Menu",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        },
+        {
+            "name": "LeftHand Glove",
+            "id": "530add30-60d8-485c-a820-dd3dbb9ef0c2",
+            "actions": [
+                {
+                    "name": "Use Primary",
+                    "type": "Button",
+                    "id": "b1900c1c-6ea3-4edd-b019-d38952ed1cfd",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Use Secondary",
+                    "type": "Button",
+                    "id": "5178ec5a-1390-4d8d-8d6c-ddcc24314398",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "a2a57feb-24ec-4d9c-be09-ea11a489ed2c",
+                    "path": "<XRController>{LeftHand}/triggerPressed",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Use Primary",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "bcbdb061-413c-4b19-be88-cb2aff436e03",
+                    "path": "<XRController>{LeftHand}/primaryButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Use Secondary",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        },
+        {
+            "name": "RightHand Glove",
+            "id": "5ea77681-a623-49c2-8852-4fce14483f96",
+            "actions": [
+                {
+                    "name": "Use Primary",
+                    "type": "Button",
+                    "id": "90db430d-61d1-41e7-b4e8-6fd619cca038",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Use Secondary",
+                    "type": "Button",
+                    "id": "e89cb7e8-8044-4acf-9f5b-37b89c959946",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "cf63505f-e9d9-471f-b08d-22eb50b02bc6",
+                    "path": "<XRController>{RightHand}/triggerPressed",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Use Primary",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "c47e1b08-e944-4358-a5d4-5e0484dace74",
+                    "path": "<XRController>{RightHand}/primaryButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Use Secondary",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

@@ -1,6 +1,8 @@
 ﻿using System.Collections;
 using UnityEngine;
 using UnityEngine.XR.Interaction.Toolkit;
+using PlayerControl.Gloves;
+using UnityEngine.InputSystem;
 
 namespace PlayerControl
 {
@@ -15,6 +17,12 @@ namespace PlayerControl
         private Glove currGlove;
 
         private Collider[] currGloveColliders;
+
+        [Header("Glove Control")]
+        [SerializeField] private InputActionReference _gloveUsePrimaryAction;
+        protected InputAction GloveUsePrimaryAction => _gloveUsePrimaryAction.action;
+        [SerializeField] private InputActionReference _gloveUseSecondaryAction;
+        protected InputAction GloveUseSecondaryAction => _gloveUseSecondaryAction.action;
 
         private void Start()
         {
@@ -34,6 +42,13 @@ namespace PlayerControl
             {
                 SetCurrGlove(gloves[0]);
             }
+
+            // Add glove using action listeners
+
+            GloveUsePrimaryAction.started += _ => GloveUsePrimaryStarted();
+            GloveUsePrimaryAction.canceled += _ => GloveUsePrimaryCancelled();
+            GloveUseSecondaryAction.started += _ => GloveUseSecondaryStarted();
+            GloveUseSecondaryAction.canceled += _ => GloveUseSecondaryCancelled();
 
         }
 
@@ -136,6 +151,11 @@ namespace PlayerControl
         {
             grabInteractor.enabled = true;
         }
+
+        private void GloveUsePrimaryStarted() => currGlove.UsePrimaryStarted();
+        private void GloveUsePrimaryCancelled() => currGlove.UsePrimaryCancelled();
+        private void GloveUseSecondaryStarted() => currGlove.UseSecondaryStarted();
+        private void GloveUseSecondaryCancelled() => currGlove.UseSecondaryCancelled();
 
     }
 }
