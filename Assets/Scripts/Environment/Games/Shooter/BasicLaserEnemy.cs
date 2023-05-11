@@ -6,6 +6,8 @@ namespace Environment.Games.Shooter
     public class BasicLaserEnemy : ShooterEnemy
     {
 
+        [SerializeField] protected DamageLaserProjector laser;
+
         [SerializeField] protected int _maxHealth;
 
         [SerializeField] protected float moveSpeed;
@@ -14,15 +16,9 @@ namespace Environment.Games.Shooter
 
         [SerializeField] protected Transform nozzleOriginTransform;
 
-        [SerializeField][Min(0)] protected int shootDamage;
         [SerializeField][Min(0)] protected float shootDelay;
         [Tooltip("Maximum angle, in degrees, that this can shoot at the player at")]
         [SerializeField][Min(0)] protected float shootMaxAngle;
-        [SerializeField] protected float maxShootDistance = 100;
-
-        [Header("Laser Line")]
-        [SerializeField] protected LineRenderer lineRenderer;
-        [SerializeField] protected float laserRenderLifetime;
 
         [Header("SFX")]
         [SerializeField] protected AudioClip damageAudioClip;
@@ -36,6 +32,11 @@ namespace Environment.Games.Shooter
         {
 
             base.Start();
+
+            if (laser == null)
+            {
+                Debug.LogError("No laser projector set");
+            }
 
             lastShootTime = 0;
 
@@ -89,49 +90,11 @@ namespace Environment.Games.Shooter
 
                 if (angle <= shootMaxAngle)
                 {
-                    Shoot(target);
+                    laser.ShootFromTo(nozzleOriginTransform.position, target);
                     lastShootTime = Time.time;
                 }
 
             }
-
-        }
-
-        private void Shoot(Vector3 target)
-        {
-
-            // Do damaging raycast
-
-            Vector3 dir = (target - nozzleOriginTransform.position).normalized;
-
-            if (Physics.Raycast(
-                origin: nozzleOriginTransform.position + (dir * 0.1f),
-                direction: dir,
-                hitInfo: out RaycastHit hit,
-                maxDistance: maxShootDistance))
-            {
-
-                IShootable shootable = hit.collider.gameObject.GetComponentInParent<IShootable>();
-
-                shootable?.GetShot(nozzleOriginTransform.position, dir, shootDamage);
-
-            }
-
-            // Draw line
-
-            StartCoroutine(LaserRenderCoroutine(target));
-
-        }
-
-        protected IEnumerator LaserRenderCoroutine(Vector3 lineEnd)
-        {
-
-            lineRenderer.enabled = true;
-            lineRenderer.SetPositions(new Vector3[] { nozzleOriginTransform.position, lineEnd });
-
-            yield return new WaitForSeconds(laserRenderLifetime);
-
-            lineRenderer.enabled = false;
 
         }
 

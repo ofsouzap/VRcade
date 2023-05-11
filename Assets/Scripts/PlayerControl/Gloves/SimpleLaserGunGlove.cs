@@ -7,12 +7,12 @@ namespace PlayerControl.Gloves
     public class SimpleLaserGunGlove : Glove
     {
 
+        [SerializeField] protected DamageLaserProjector laser;
+
         [Tooltip("The transform at the position where the ray should start. The ray will shoot in the direction of the transform's positive-z axis")]
         [SerializeField] protected Transform rayStartTransform;
         private Vector3 RayStart => rayStartTransform.position;
         private Vector3 RayDir => rayStartTransform.forward;
-
-        [SerializeField] protected LineRenderer lineRenderer;
 
         [SerializeField] protected float maxShootDistance = 100;
 
@@ -28,6 +28,11 @@ namespace PlayerControl.Gloves
 
             base.Start();
 
+            if (laser == null)
+            {
+                Debug.LogError("No laser projector set");
+            }
+
             lastShoot = 0;
 
         }
@@ -40,48 +45,8 @@ namespace PlayerControl.Gloves
             if (Time.time - lastShoot >= shootDelay)
             {
                 lastShoot = Time.time;
-                Shoot();
+                laser.Shoot(RayStart, RayDir);
             }
-
-        }
-
-        protected void Shoot()
-        {
-
-            bool hitFound = Physics.Raycast(
-                origin: RayStart,
-                direction: RayDir,
-                maxDistance: maxShootDistance,
-                hitInfo: out RaycastHit hit);
-
-            // Perform shooting hit code
-
-            if (hitFound)
-            {
-
-                IShootable shootable = hit.collider.gameObject.GetComponentInParent<IShootable>();
-
-                shootable?.GetShot(RayStart, RayDir, damageDone);
-
-            }
-
-            // Render laser
-
-            Vector3 lineEnd = hitFound ? hit.point : RayStart + (maxShootDistance * RayDir);
-
-            StartCoroutine(LaserRenderCoroutine(lineEnd));
-
-        }
-
-        protected IEnumerator LaserRenderCoroutine(Vector3 lineEnd)
-        {
-
-            lineRenderer.enabled = true;
-            lineRenderer.SetPositions(new Vector3[] { RayStart, lineEnd });
-
-            yield return new WaitForSeconds(laserRenderLifetime);
-
-            lineRenderer.enabled = false;
 
         }
 
