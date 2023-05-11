@@ -1,4 +1,7 @@
-﻿using System.Collections.Generic;
+﻿using Audio;
+using System.Collections;
+using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 namespace Environment.Games.Shooter
@@ -6,13 +9,22 @@ namespace Environment.Games.Shooter
     public abstract class ShooterEntity : MonoBehaviour, IShootable
     {
 
+        protected ShooterGameController GameController => ShooterGameController.Singleton;
+        protected SFXController SfxController { get; private set; }
+
         protected abstract int GetMaxHealth();
 
         protected EntityStatus status;
         protected bool IsDead => status.IsDead;
 
+        protected virtual void Awake()
+        {
+        }
+
         protected virtual void Start()
         {
+
+            SfxController = SFXController.FindSceneController(gameObject.scene);
 
             status = new(GetMaxHealth());
 
@@ -40,10 +52,11 @@ namespace Environment.Games.Shooter
 
         }
 
-        public void Shoot(Vector3 origin, Vector3 direction, int damage)
+        public void GetShot(Vector3 origin, Vector3 direction, int damage)
         {
 
-            TakeDamage(damage);
+            if (!IsDead)
+                TakeDamage(damage);
 
         }
     }

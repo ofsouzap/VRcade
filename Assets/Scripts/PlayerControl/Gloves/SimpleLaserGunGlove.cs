@@ -21,7 +21,7 @@ namespace PlayerControl.Gloves
         [SerializeField] protected float shootDelay = 0;
         private float lastShoot;
 
-        protected const float laserRenderLifetime = 0.1f;
+        [SerializeField] [Min(0)] protected float laserRenderLifetime;
 
         protected override void Start()
         {
@@ -48,13 +48,11 @@ namespace PlayerControl.Gloves
         protected void Shoot()
         {
 
-            RaycastHit hit;
-
             bool hitFound = Physics.Raycast(
                 origin: RayStart,
                 direction: RayDir,
                 maxDistance: maxShootDistance,
-                hitInfo: out hit);
+                hitInfo: out RaycastHit hit);
 
             // Perform shooting hit code
 
@@ -63,7 +61,7 @@ namespace PlayerControl.Gloves
 
                 IShootable shootable = hit.collider.gameObject.GetComponentInParent<IShootable>();
 
-                shootable?.Shoot(RayStart, RayDir, damageDone);
+                shootable?.GetShot(RayStart, RayDir, damageDone);
 
             }
 

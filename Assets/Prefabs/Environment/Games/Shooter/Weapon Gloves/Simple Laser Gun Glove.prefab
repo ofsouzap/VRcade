@@ -246,8 +246,9 @@ MonoBehaviour:
   rayStartTransform: {fileID: 6826632553479586548}
   lineRenderer: {fileID: 7888256016401892175}
   maxShootDistance: 100
-  damageDone: 2
+  damageDone: 1
   shootDelay: 0.5
+  laserRenderLifetime: 0.05
 --- !u!120 &7888256016401892175
 LineRenderer:
   m_ObjectHideFlags: 0

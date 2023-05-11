@@ -5,7 +5,7 @@ namespace Environment.Games.Shooter
     public interface IShootable
     {
 
-        public void Shoot(Vector3 origin, Vector3 direction, int damage);
+        public void GetShot(Vector3 origin, Vector3 direction, int damage);
 
     }
 }

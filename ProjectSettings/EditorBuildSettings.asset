@@ -6,11 +6,11 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/VRcade.unity
-    guid: 97b56dc64b73ae348a93c8d739858dd4
-  - enabled: 1
     path: Assets/Scenes/Shooter.unity
     guid: 66ad16b3a65448c4b9bbfef2f00b1d43
+  - enabled: 1
+    path: Assets/Scenes/VRcade.unity
+    guid: 97b56dc64b73ae348a93c8d739858dd4
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: bfa1182bd221b4ca89619141f66f1260,
       type: 2}

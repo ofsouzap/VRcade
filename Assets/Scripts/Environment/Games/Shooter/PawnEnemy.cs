@@ -11,14 +11,14 @@ namespace Environment.Games.Shooter
 
         protected override int GetMaxHealth() => 5;
 
-        protected override void Die()
+        protected override IEnumerator PreDeathCoroutine()
         {
-            Debug.Log("Enemy died");  // TODO - do something proper eventually
+            yield break;
         }
 
         protected override void OnDamageTaken()
         {
-            SFXController.FindSceneController(gameObject.scene).PlaySFX(damageClip); // TODO - store SFXController instead of fetching each time
+            SfxController.PlaySFX(damageClip);
         }
 
     }

@@ -6,9 +6,22 @@ namespace Environment.Games.Shooter
     public class ShooterGameController : MonoBehaviour
     {
 
-        [SerializeField] [Min(1)] protected int playerMaxHealth;
+        public static ShooterGameController Singleton { get; private set; }
 
-        private EntityStatus playerStatus;
+        public ShooterPlayer Player => ShooterPlayer.Singleton;
+
+        private void Awake()
+        {
+
+            if (Singleton == null)
+                Singleton = this;
+            else
+            {
+                Debug.LogWarning("Trying to create a ShooterGameController when there is already a singleton");
+                Destroy(gameObject);
+            }
+
+        }
 
         private void Start()
         {
@@ -19,8 +32,6 @@ namespace Environment.Games.Shooter
 
         private void StartGame()
         {
-
-            playerStatus = new EntityStatus(maxHealth: playerMaxHealth);
 
             // TODO - start waves
 
