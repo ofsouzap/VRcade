@@ -81,7 +81,7 @@ namespace Environment.Games.Shooter
             if (Time.time - lastShootTime > shootDelay)
             {
 
-                Vector3 target = GameController.Player.GetHeadTransform().position;
+                Vector3 target = GameController.Player.GetShootTargetPosition();
                 Vector3 targetDisplacement = target - nozzleOriginTransform.position;
 
                 // Check angle is correct for shooting player

@@ -9,6 +9,8 @@ namespace Environment.Games.Shooter
         [SerializeField] protected Transform headTransform;
         public Transform GetHeadTransform() => headTransform;
 
+        [SerializeField] protected CharacterController characterController;
+
         [SerializeField] protected int _maxHealth;
         protected override int GetMaxHealth() => _maxHealth;
 
@@ -26,6 +28,35 @@ namespace Environment.Games.Shooter
             }
 
             base.Awake();
+
+        }
+
+        protected override void Start()
+        {
+
+            base.Start();
+
+            if (characterController == null)
+            {
+
+                if (!TryGetComponent(out characterController))
+                {
+                    Debug.LogWarning("No character controller set");
+                }
+
+            }
+
+        }
+
+        /// <summary>
+        /// Get the position on the player that the enemies should be aiming to shoot at
+        /// </summary>
+        public Vector3 GetShootTargetPosition()
+        {
+
+            Vector3 characterControllerCenter = characterController.center + characterController.transform.position;
+
+            return (characterControllerCenter + GetHeadTransform().position) / 2; // Takes halfway between headset and center of body
 
         }
 
